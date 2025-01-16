@@ -45,3 +45,18 @@
 
   ```sh
   curl -H "access_token: your_api_key" http://localhost:8000/secure-endpoint
+
+
+### 認証なしエンドポイント
+curl -X GET http://127.0.0.1:8000
+
+curl -X GET http://127.0.0.1:8000/users/
+
+curl -X GET http://127.0.0.1:8000/users/1
+
+curl -X GET http://127.0.0.1:8000/items/
+
+curl -X POST \
+  http://127.0.0.1:8000/items/ \
+  -H 'Content-Type: application/json' \
+  -d '{ "name": "ChatGPT", "price": 100.0 }'
