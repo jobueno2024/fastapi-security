@@ -1,11 +1,10 @@
 from fastapi import FastAPI
-from routers import users, items, security1
+from routers import httpbasic, security1
 
 app = FastAPI()
 
-app.include_router(users.router, prefix="/users", tags=["users"])
-app.include_router(items.router, prefix="/items", tags=["items"])
-app.include_router(security1.router, prefix="/security1", tags=["users"])
+app.include_router(httpbasic.router, prefix="/httpbasic", tags=["security"])
+# app.include_router(security1.router, prefix="/security1", tags=["security"])
 
 @app.get("/")
 async def root():
