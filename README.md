@@ -17,6 +17,7 @@ https://fastapi.tiangolo.com/advanced/security/http-basic-auth/
 
 ## HTTP Credentials
 
+https://fastapi.tiangolo.com/ja/reference/security/#fastapi.security.HTTPAuthorizationCredentials
 
 ## OAuth2 Authentication
 
@@ -75,3 +76,9 @@ curl -X 'POST' \
 curl -X 'GET' \
   'http://localhost:8000/apikeyheader' \
   -H "x-key: your_api_key_here"
+
+### HTTP Credentials
+curl -X 'GET' \
+  'http://localhost:8000/http_auth_credentials' \
+  -H 'accept: application/json' \
+  -H 'Authorization: Bearer secret-token'
